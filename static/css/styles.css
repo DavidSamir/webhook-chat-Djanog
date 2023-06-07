@@ -1,0 +1,39 @@
+body {
+    background-color: #dadada;
+}
+
+.container {
+    max-width: 1470px;
+    margin: 0 auto;
+}
+
+
+nav {
+    background-color: azure;
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #fafafa;
+    justify-content: space-between;
+}
+
+
+nav a {
+    padding: 5px 10px;
+    background-color: #666;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+.login {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
