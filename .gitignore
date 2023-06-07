@@ -1,0 +1,10 @@
+*.pyc
+*.pyc
+db/*
+api/__pycache__/*
+api/migrations/*.py
+db.sqlite3
+.env
+proj_env
+public/upload/passport/*
+test.py
