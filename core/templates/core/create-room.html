@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Welcome | {% endblock %}
+
+{% block content %}
+<div>
+    <h5>Create new room</h5>
+</div>
+
+
+
+<form method="post" action=".">
+    {% csrf_token %}
+
+    <div class="input-group  mb-3">
+        <label>Name
+
+            <input type="text" name="name" class="form-control">
+        </label>
+    </div>
+    <div class="input-group  mb-3">
+        <label>Description:
+            <textarea name="description" cols="30" rows="10" class="form-control"></textarea>
+        </label>
+    </div>
+
+
+    {% if form.errors %}
+    {% for field in form %}
+    {% for error in field.errors %}
+    <div>
+        <p>{{ error|escape }}</p>
+    </div>
+    {% endfor %}
+    {% endfor %}
+    {% endif %}
+
+    <button class="btn btn-primary">Create</button>
+</form>
+{% endblock %}

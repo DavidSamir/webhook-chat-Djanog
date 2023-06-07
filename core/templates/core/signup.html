@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Sign up | {% endblock %}
+
+{% block content %}
+<div>
+    <h1>Sign up</h1>
+</div>
+
+<form method="post" action="." class="login">
+    {% csrf_token %}
+
+
+    <div class="input-group  mb-3">
+        <label>Username
+
+            <input type="text" name="username" class="form-control">
+        </label>
+    </div>
+
+    <div class="input-group  mb-3">
+        <label>Password
+
+            <input type="password" name="password1" class="form-control">
+        </label>
+    </div>
+    <div class="input-group  mb-3">
+        <label>Repeat password
+
+            <input type="password" name="password2" class="form-control">
+        </label>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+
+    {% if form.errors %}
+    <script>alert(" Please fill all fields and use strong apssword. ")</script>
+    {% endif %}
+
+</form>
+{% endblock %}
