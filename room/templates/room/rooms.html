@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Rooms | {% endblock %}
+
+{% block content %}
+<div class="rooms">
+    {% for room in rooms %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Room Name: {{ room.name }}</h5>
+            <a href="{% url 'room' room.slug %}" class="btn btn-primary">Open room</a>
+        </div>
+    </div>
+    {% empty %}
+    <p>No rooms</p>
+    {% endfor %}
+
+</div>
+{% endblock %}
